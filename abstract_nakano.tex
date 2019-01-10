@@ -1,0 +1,71 @@
+\documentclass[oneside, 10pt, twocolumn]{jarticle}
+
+\title{\bf{\rm}
+多目的最短経路問題における
+\\動的計画法に基づいた
+\\拡張ベルマンフォード法の提案}
+
+\author{宋研究室
+\hspace{15pt}
+中野　壱帥　(15715051)}
+\date{}
+
+\usepackage{amsfonts}
+\usepackage{setspace}
+\setstretch{1.18} % ページ全体の行間を設定
+\pagestyle{empty}
+\oddsidemargin -5mm
+\textwidth 170mm
+\topmargin -28mm
+\textheight 270mm
+\columnsep 5mm
+
+% sectionの大きさ
+\makeatletter
+\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus
+-.2ex}{2.3 ex plus .2ex}{\large\bf}}
+% sectionの行間
+\renewcommand{\section}{
+\@startsection{section}{1}{\z@}
+{.1\Cvs \@plus.0\Cdp \@minus.1\Cdp}%  上の空き
+{.1\Cvs \@plus.1\Cdp \@minus.0\Cdp}%  下の空き
+{\reset@font\large\bfseries}}      %  字の大きさ
+\makeatother
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{研究背景}
+現代には道路ネットワークや通信ネットワークなど様々なネットワークが存在する．
+これらのネットワークには無数の経路や組み合わせが存在するため最適化した解を求めたい．
+しかし，これらのネットワークに対する最適化を行う場合，複数の目的関数を考慮することが必要である．
+例えば，道路ネットワークでは目的地までの時間とコストを最小化する必要がある．
+このように複数の目的関数値を最大化（最小化）する解を求める問題は多目的最適化問題と呼ばれている．
+多目的最適化問題の中でも，最短経路を求める問題は多目的最短経路問題と呼ばれている．
+
+多目的最適化問題においては，それぞれの目的関数がトレードオフの関係にある場合が存在し，
+全ての目的関数値が最大（最小）となる最適解が存在するとは限らない．
+そこで，最適解になり得るパレート最適解の集合を求める．
+パレート最適解の集合を求めることにより解を選択する意思決定を容易にできる．
+一般にパレート最適解は膨大な数存在するので効率的に列挙することが必要になる.
+また，単一目的最短経路問題には負の要素を考慮した解法が提案されているが，
+調査した限り従来の多目的最短経路問題には負の要素を考慮した研究がなされていない．
+\cite{a-GAS}
+
+\section{研究目的}
+
+
+\section{研究成果}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{9} %参考文献{載せる参考文献の数の上限}
+  \bibitem{a-GASP}
+   Darmann, Elkind, Lang, Kurz, Schauer, Woeginger.
+   Group Activity Selection Problem. In LNCS~\textbf{7695}, pp. 156-169,
+   2012.
+
+\end{thebibliography}
+
+\end{document}
